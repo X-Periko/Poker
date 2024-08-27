@@ -34,70 +34,62 @@ print(Player_cards)
 #Comprobar cartas
 pairs = []
 pairs_count = 0
-Card5 = None
 for x in range (0,5):
-    if '1' or '2' or '3' or '4' or '5' or '6' or '7' or '10' or '11' or '12' in AI_cards[x]:
-        if x == 1: 
-            Card1 = True
-        if x == 2:
-            Card2 = True
-        if x == 3:
-            Card3 = True
-        if x == 4:
-            Card4 = True 
-        if x == 5:
-            Card5 = True
-if Card1 and Card2:
-    pairs.append(Card1)
-    pairs.append(Card2)
-    pair_count =+ 1
+    for y in range(0,5):
+        if '1' in AI_cards[x] and '1' in AI_cards[y]:
+            if x not in pairs and y not in pairs:    
+                pairs.append(AI_cards[x])
+                pairs.append(AI_cards[y])
+                print(x, ' and ', y)
+        if '2' in AI_cards[x] and '2' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(AI_cards[x])
+                pairs.append(AI_cards[y])
+                print(x, ' and ', y)
+        if '3' in AI_cards[x] and '3' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(AI_cards[x])
+                pairs.append(AI_cards[y])
+                print(x, ' and ', y)
+        if '4' in AI_cards[x] and '4' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
+        if '5' in AI_cards[x] and '5' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
+        if '6' in AI_cards[x] and '6' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
+        if '7' in AI_cards[x] and '7' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
+        if '10' in AI_cards[x] and '10' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
+        if '11' in AI_cards[x] and '11' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
+        if '12' in AI_cards[x] and '12' in AI_cards[y]:
+            if x not in pairs and y not in pairs:
+                pairs.append(x)
+                pairs.append(y)
+                print(x, ' and ', y)
 
-if Card1 and Card3:
-    pairs.append(Card1)
-    pairs.append(Card3)
-    pair_count =+ 1
-
-if Card1 and Card4:
-    pairs.append(Card1)
-    pairs.append(Card4)
-    pair_count =+ 1
-
-if Card1 and Card5:
-    pairs.append(Card1)
-    pairs.append(Card5)
-    pair_count =+ 1
-
-if Card2 and Card3:
-    pairs.append(Card2)
-    pairs.append(Card3)
-    pair_count =+ 1
-
-if Card2 and Card4:
-    pairs.append(Card2)
-    pairs.append(Card4)
-    pair_count =+ 1
-
-if Card2 and Card5:
-    pairs.append(Card2)
-    pairs.append(Card5)
-    pair_count =+ 1
-
-if Card4 and Card3:
-    pairs.append(Card4)
-    pairs.append(Card3)
-    pair_count =+ 1
-
-if Card5 and Card3:
-    pairs.append(Card5)
-    pairs.append(Card3)
-    pair_count =+ 1
-
-if Card4 and Card5:
-    pairs.append(Card4)
-    pairs.append(Card5)
-    pair_count =+ 1
-
+pairs_count = len(pairs) / 2
 print('I have ', pairs_count, ' pairs')
+print(pairs)
 #Apuesta inicial y reparto de dinero
 
 AI_money = 10
