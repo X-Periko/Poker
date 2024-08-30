@@ -1,4 +1,5 @@
 import random as r
+from tkinter import *
 
 #Repartir cartas 
 
@@ -200,6 +201,11 @@ def Check():
         EstimatedToWin = EstimatedToWin + 40
 
 Check
+
+#Interfaz
+
+root = Tk()
+root.mainloop()
 
 #Juego
 while Player_money > 0 and AI_money > 0:
