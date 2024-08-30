@@ -14,66 +14,67 @@ Player_cards = []
 
 #Comprobar parejas
 pairs = []
-for x in range (0,5):
-    for y in range(0,5):
-        if AI_cards[x] == AI_cards[y]:
-            continue
-        if '1' in AI_cards[x] and '1' in AI_cards[y]:
-            if not len(AI_cards[x]) == 3 and not len(AI_cards[y]) == 3:
+def CheckPairs():
+    for x in range (0,5):
+        for y in range(0,5):
+            if AI_cards[x] == AI_cards[y]:
+                continue
+            if '1' in AI_cards[x] and '1' in AI_cards[y]:
+                if not len(AI_cards[x]) == 3 and not len(AI_cards[y]) == 3:
+                    if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                        pairs.append(AI_cards[x])
+                        pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '2' in AI_cards[x] and '2' in AI_cards[y]:
+                if not len(AI_cards[x]) == 3 and not len(AI_cards[y]) == 3:
+                    if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                        pairs.append(AI_cards[x])
+                        pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '3' in AI_cards[x] and '3' in AI_cards[y]:
                 if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
                     pairs.append(AI_cards[x])
                     pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '2' in AI_cards[x] and '2' in AI_cards[y]:
-            if not len(AI_cards[x]) == 3 and not len(AI_cards[y]) == 3:
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '4' in AI_cards[x] and '4' in AI_cards[y]:
                 if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
                     pairs.append(AI_cards[x])
                     pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '3' in AI_cards[x] and '3' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '4' in AI_cards[x] and '4' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '5' in AI_cards[x] and '5' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '6' in AI_cards[x] and '6' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '7' in AI_cards[x] and '7' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '10' in AI_cards[x] and '10' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '11' in AI_cards[x] and '11' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-        if '12' in AI_cards[x] and '12' in AI_cards[y]:
-            if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
-                pairs.append(AI_cards[x])
-                pairs.append(AI_cards[y])
-                print(AI_cards[x], ' and ', AI_cards[y])
-pairs_count = int(len(pairs) / 2)
-print('I have ', pairs_count, ' pairs')
-if len(pairs) > 0:
-    print(pairs)
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '5' in AI_cards[x] and '5' in AI_cards[y]:
+                if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                    pairs.append(AI_cards[x])
+                    pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '6' in AI_cards[x] and '6' in AI_cards[y]:
+                if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                    pairs.append(AI_cards[x])
+                    pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '7' in AI_cards[x] and '7' in AI_cards[y]:
+                if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                    pairs.append(AI_cards[x])
+                    pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '10' in AI_cards[x] and '10' in AI_cards[y]:
+                if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                    pairs.append(AI_cards[x])
+                    pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '11' in AI_cards[x] and '11' in AI_cards[y]:
+                if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                    pairs.append(AI_cards[x])
+                    pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+            if '12' in AI_cards[x] and '12' in AI_cards[y]:
+                if AI_cards[x] not in pairs and AI_cards[y] not in pairs:    
+                    pairs.append(AI_cards[x])
+                    pairs.append(AI_cards[y])
+                    print(AI_cards[x], ' and ', AI_cards[y])
+    pairs_count = int(len(pairs) / 2)
+    print('I have ', pairs_count, ' pairs')
+    if len(pairs) > 0:
+        print(pairs)
 
 #Comprobar tríos
 
