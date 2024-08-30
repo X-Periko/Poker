@@ -9,25 +9,7 @@ free_cards = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p10', 'p11', 'p12',
 AI_cards = []
 Player_cards = []
 
-def shuffleAI():
-    selected_card =  r.choice(free_cards)
-    selected_index = free_cards.index(selected_card)
-    del free_cards[selected_index]
-    AI_cards.append(selected_card)
-    
-for x in range(0,5):
-    shuffleAI()
-print(AI_cards)
 
-def shuffleP():
-    selected_card =  r.choice(free_cards)
-    selected_index = free_cards.index(selected_card)
-    del free_cards[selected_index]
-    Player_cards.append(selected_card)
-
-for x in range(0,5):
-    shuffleP()
-print(Player_cards)
 
 #Comprobar parejas
 pairs = []
@@ -221,6 +203,26 @@ Check
 
 #Juego
 while Player_money > 0 and AI_money > 0:
+    def shuffleAI():
+        selected_card =  r.choice(free_cards)
+        selected_index = free_cards.index(selected_card)
+        del free_cards[selected_index]
+        AI_cards.append(selected_card)
+    
+    for x in range(0,5):
+       shuffleAI()
+    print(AI_cards)
+
+    def shuffleP():
+        selected_card =  r.choice(free_cards)
+        selected_index = free_cards.index(selected_card)
+        del free_cards[selected_index]
+        Player_cards.append(selected_card)
+
+    for x in range(0,5):
+        shuffleP()
+    print(Player_cards)
+
     Desea_subir = 'Desea subir la apuesta o retirarse (s/r)? Tiene ', Player_money, ' dólares'
     print(Desea_subir)
     Acción = input('> ')
@@ -250,6 +252,7 @@ while Player_money > 0 and AI_money > 0:
         print('AI gana ', apuesta, ' dólares')
         AI_money = AI_money + apuesta
         apuesta = 0
+        continue
 
     apuesta = apuesta + int(To_add)
     EstimatedToWin = EstimatedToWin - (int(To_add) * 5)
@@ -270,6 +273,10 @@ while Player_money > 0 and AI_money > 0:
         else:
             print('La IA ha ganado ', apuesta, ' dólares')
             apuesta = 0
+    else:
+        print('La IA se retira')
+        apuesta = 0
+        Player_money = Player_money + apuesta
         
     print('La apuesta ahora es de:', apuesta)
 
