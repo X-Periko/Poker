@@ -239,7 +239,6 @@ while Player_money > 0 and AI_money > 0:
 
     CheckTrios()
     CheckPairs()
-
     Desea_subir = 'Desea subir la apuesta o retirarse (s/r)? Tiene ', Player_money, ' dólares'
     print(Desea_subir)
     Acción = input('> ')
